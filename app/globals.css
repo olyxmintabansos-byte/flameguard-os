@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #07090e;
+    --accent-emerald: #10b981;
+    --accent-flame: #f59e0b;
+    --card-bg: #0e121a;
+  }
+
+  body {
+    @apply bg-[var(--primary)] text-white;
+  }
+}
+
+@layer components {
+  .heatmap-cell {
+    @apply w-3 h-3 rounded-sm cursor-pointer transition-all duration-150 hover:scale-110;
+  }
+
+  .heatmap-cell-0 {
+    @apply bg-slate-700/40;
+  }
+
+  .heatmap-cell-1 {
+    @apply bg-emerald-700;
+  }
+
+  .heatmap-cell-2 {
+    @apply bg-emerald-500;
+  }
+
+  .heatmap-cell-3 {
+    @apply bg-emerald-400;
+  }
+
+  .heatmap-cell-4 {
+    @apply bg-emerald-300;
+  }
+
+  .glass-card {
+    @apply rounded-lg border border-emerald-500/20 bg-[var(--card-bg)]/80 backdrop-blur-md;
+  }
+
+  .flame-text {
+    @apply bg-gradient-to-r from-amber-400 via-orange-400 to-red-500 bg-clip-text text-transparent;
+  }
+}
